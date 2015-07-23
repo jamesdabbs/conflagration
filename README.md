@@ -1,26 +1,26 @@
 # Conflagration
 
-TODO: Write a gem description
+## What
 
-## Installation
+A dumb thing to save models to a JSON file
 
-Add this line to your application's Gemfile:
+## Why
 
-```ruby
-gem 'conflagration'
+[Figaro](https://github.com/laserlemon/figaro) is great. Sometimes I want to be able to edit settings with a `form_for` though.
+
+## How
+
+```
+class Configurator < Conflagration
+  path Rails.root.join "db", "#{Rails.env}.json"
+
+  attribute :some_path
+end
+
+c = Configurator.read
+c.update some_path: some_new_path
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install conflagration
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 

@@ -1,3 +1,3 @@
-module Conflagration
+class Conflagration
   VERSION = "0.0.1"
 end
