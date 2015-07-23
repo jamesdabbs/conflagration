@@ -6,7 +6,7 @@ require "virtus"
 
 class Conflagration
   include ActiveModel::Model
-  include Virtus
+  include Virtus.model
 
   Unset = Class.new(StandardError)
 
